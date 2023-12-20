@@ -3,19 +3,19 @@ import numpy as np
 import pandas as pd
 import time
 
-st.header("My first Streamlit App")
+st.header("My First Streamlit App")
 
 option = st.sidebar.selectbox(
     'Select a mini project',
-     ['line chart','map','T n C','Long Process'])
+     ['Line Chart','Map','T n C','Long Process'])
 
-if option=='line chart':
+if option=='Line Chart':
     chart_data = pd.DataFrame(
       np.random.randn(20, 3),
       columns=['a', 'b', 'c'])
     st.line_chart(chart_data)
 
-elif option=='map':
+elif option=='Map':
     map_data = pd.DataFrame(
     np.random.randn(1000, 2) / [50, 50] + [3.1242, 101.6861],
     columns=['lat', 'lon'])
